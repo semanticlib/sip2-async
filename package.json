@@ -1,0 +1,28 @@
+{
+  "name": "sip2-async",
+  "version": "1.0.0",
+  "description": "Async 3M SIP2 protocol client",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "lint": "standard --env mocha",
+    "test": "mocha --recursive"
+  },
+  "repository": "https://github.com/semanticlib/sip2-async",
+  "license": "MIT",
+  "dependencies": {
+    "date-and-time": "^2.4.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.0.0",
+    "standard": "^17.0.0"
+  },
+  "keywords": [
+    "SIP2",
+    "RFID",
+    "ILS"
+  ]
+}
