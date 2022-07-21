@@ -13,7 +13,8 @@ const options = {
   timezoneOffset: '+0000',  // server timezone, useful if logs need to be saved
   dueDateFormat: 'YYYYMMDD', // format returned by the server
   terminator: 'CR', // response is empty if set incorrectly, use 'CRLF' for Koha
-  verbose: false // set it to true to get everything
+  verbose: false, // set it to true to get all the fields in response
+  debug: false  // set it to true to get request and response messages in 'debugData{}'
 }
 
 const socket = new SIP2.Client(options)
