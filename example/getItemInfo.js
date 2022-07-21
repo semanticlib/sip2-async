@@ -10,11 +10,11 @@ const itemId = ''
 const options = {
   host: 'localhost',
   port: 6001,
-  timezoneOffset: '+0000',  // server timezone, useful if logs need to be saved
+  timezoneOffset: '+0000',  // set to server timezone, useful if logs need to be saved
   dueDateFormat: 'YYYYMMDD', // format returned by the server
   terminator: 'CR', // response is empty if set incorrectly, use 'CRLF' for Koha
-  verbose: false, // set it to true to get all the fields in response
-  debug: false  // set it to true to get request and response messages in 'debugData{}'
+  verbose: false, // set to true to get all the fields in response
+  debug: false  // set to true to get request and response messages in 'debugData{}'
 }
 
 const socket = new SIP2.Client(options)
@@ -33,6 +33,6 @@ if (!loginResponse.ok) {
   itemRequest.sequence = 2 // optional, default: 2
   itemRequest.institutionId = sipInst
   const itemResponse = await socket.send(itemRequest.getMessage())
-  socket.close()
   console.log(itemResponse)
 }
+socket.close()
