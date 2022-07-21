@@ -2,7 +2,7 @@
 
 Promise-based SIP2 client for Node.
 
-This is based on [node-sip2](https://github.com/frankdsm/node-sip2) package.
+This is based on the [node-sip2](https://github.com/frankdsm/node-sip2) package.
 
 Tested on *Node => 16x*
 
@@ -17,7 +17,7 @@ $ npm install sip2-async
 Example usage for getting Item Information:
 
 ```
-import SIP2 from 'sip2-async'
+import SIP2 from 'sip2-async' // set "type": "module" in the package.json
 
 const sipUser = ''
 const sipPass = ''
@@ -28,10 +28,10 @@ const itemId = ''
 const options = {
   host: 'localhost',
   port: 6001,
-  timezoneOffset: '+0000',  // set it to server timezone, useful if transactions logs need to be saved
-  dueDateFormat: 'YYYYMMDD', // varies in implementations, needed to convert arbitrary date string to Date() object
-  terminator: 'CR', // very important, set it to 'CRLF' for Koha
-  verbose: false // Keeps most useful fields in response, set it to true to get everything
+  timezoneOffset: '+0000',  // server timezone, useful if logs need to be saved
+  dueDateFormat: 'YYYYMMDD', // format returned by the server
+  terminator: 'CR', // response is empty if set incorrectly, use 'CRLF' for Koha
+  verbose: false // set it to true to get everything
 }
 
 const socket = new SIP2.Client(options)
@@ -66,7 +66,9 @@ for syntax and code re-use.
 ## Features
 
 - Promise (async/await) responses instead of callbacks.
-- Response data structure simplified (titleIdentifier -> title, patronIdentifier -> patronId, etc.)
+- Response data structure simplified (titleIdentifier -> title, patronIdentifier -> patronId, etc.).
+- Some fields are grouped such as `summaryCount{}` and `blocks[]` in *PatronInformation*.
+- More often than not the empty fields are ignored in response payload.
 - Choose suitable terminator (CR|CRLF) as per server implementation. Koha defaults to *CRLF*.
 - Parse transaction date as per the timezone offset in the *Client* options.
 - Use the `verbose` option to get all the fields in response payload. Default: `false`.
