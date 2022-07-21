@@ -22,7 +22,7 @@ await socket.connect()
 
 // Login
 const loginRequest = new SIP2.LoginRequest(sipUser, sipPass, sipInst)
-loginRequest.sequence = 1
+loginRequest.sequence = 1 // optional, default: 1
 const loginResponse = await socket.send(loginRequest.getMessage())
 
 // Item Information
@@ -30,7 +30,7 @@ if (!loginResponse.ok) {
   console.log('SIP2 login failed')
 } else {
   const itemRequest = new SIP2.ItemInformationRequest(itemId)
-  itemRequest.sequence = 2
+  itemRequest.sequence = 2 // optional, default: 2
   itemRequest.institutionId = sipInst
   const itemResponse = await socket.send(itemRequest.getMessage())
   socket.close()
