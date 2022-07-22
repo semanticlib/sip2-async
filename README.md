@@ -14,7 +14,7 @@ npm install sip2-async
 ```
 or
 ```bash
-yarn install sip2-async
+yarn add sip2-async
 ```
 
 ## Example Usage
