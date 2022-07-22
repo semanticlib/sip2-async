@@ -10,14 +10,18 @@ This is based on the [node-sip2](https://github.com/frankdsm/node-sip2) package.
 ## Installation
 
 ```bash
-$ npm install sip2-async
+npm install sip2-async
+```
+or
+```bash
+yarn install sip2-async
 ```
 
 ## Example Usage
 
 Example usage for getting Item Information:
 
-```
+```js
 import SIP2 from 'sip2-async' // set "type": "module" in the package.json
 
 const sipUser = ''
@@ -29,11 +33,11 @@ const itemId = ''
 const options = {
   host: 'localhost',
   port: 6001,
-  timezoneOffset: '+0000',  // set to server timezone, useful if logs need to be saved
+  timezoneOffset: '+0000', // set to server timezone, useful if logs need to be saved
   dueDateFormat: 'YYYYMMDD', // format returned by the server
   terminator: 'CR', // response is empty if set incorrectly, use 'CRLF' for Koha
   verbose: false, // set to true to get all the fields in response
-  debug: false  // set to true to get request and response messages in 'debugData{}'
+  debug: false // set to true to get request and response messages in 'debugData{}'
 }
 
 const socket = new SIP2.Client(options)
@@ -79,9 +83,7 @@ for syntax and code re-use.
 
 ## Tests
 
-To run the test suite, first install the dependencies then run `yarn test`:
-
 ```bash
-$ yarn install
-$ yarn test
+yarn install
+yarn test
 ```
