@@ -1,6 +1,6 @@
 {
   "name": "sip2-async",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Async 3M SIP2 protocol client",
   "main": "index.js",
   "type": "module",
