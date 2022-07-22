@@ -10,11 +10,11 @@ const itemId = ''
 const options = {
   host: 'localhost',
   port: 6001,
-  timezoneOffset: '+0000',  // set to server timezone, useful if logs need to be saved
+  timezoneOffset: '+0000', // set to server timezone, useful if logs need to be saved
   dueDateFormat: 'YYYYMMDD', // format returned by the server
   terminator: 'CR', // response is empty if set incorrectly, use 'CRLF' for Koha
   verbose: false, // set to true to get all the fields in response
-  debug: false  // set to true to get request and response messages in 'debugData{}'
+  debug: false // set to true to get request and response messages in 'debugData{}'
 }
 
 const socket = new SIP2.Client(options)
