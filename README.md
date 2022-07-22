@@ -4,8 +4,6 @@ Promise-based SIP2 client for Node.
 
 This is based on the [node-sip2](https://github.com/frankdsm/node-sip2) package.
 
-Tested on *Node => 16x*
-
 ## Installation
 
 ```bash
@@ -75,7 +73,6 @@ for syntax and code re-use.
 - Use the `verbose` option to get all the fields in response payload. Default: `false`.
 - Replaced `dateformat` with `date-and-time` since it can do both parsing and formatting.
 - Convert the dueDate to *Date* object using the `date-and-time` package. Koha responds in *YYYYMMDD...*
-
 
 ## Tests
 
