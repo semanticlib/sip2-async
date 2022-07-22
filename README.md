@@ -1,4 +1,7 @@
 # SIP2 Async
+![main](https://github.com/semanticlib/sip2-async/actions/workflows/main.yml/badge.svg)
+[![NPM version](https://img.shields.io/npm/v/sip2-async.svg)](https://npmjs.org/package/sip2-async)
+[![NPM downloads](https://img.shields.io/npm/dm/sip2-async.svg)](https://npmjs.org/package/sip2-async)
 
 Promise-based SIP2 client for Node.
 
