@@ -17,7 +17,7 @@
     "date-and-time": "^2.4.0"
   },
   "devDependencies": {
-    "mocha": "^10.0.0",
+    "mocha": "10.3.0",
     "standard": "^17.0.0"
   },
   "keywords": [
